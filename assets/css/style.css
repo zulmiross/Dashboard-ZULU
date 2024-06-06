@@ -1,3 +1,18 @@
+:root {
+    --color-black: #0000;
+    --color-white: #ffff;
+    --color-ice: #dedede;
+    --color-blue: #007bff;
+    --color-blue-100: #4fb1cf;
+    --color-bg-menu: #4c4c66;
+    --color-bg-submenu: #3a3f48;
+}
+
+a,
+button {
+    text-decoration: none !important;
+}
+
 .sidebar {
     position: fixed;
     top: 0;
@@ -12,27 +27,158 @@
 }
 
 .sidebar-dropdown a {
-    color: rgb(212, 215, 218);
+    color: var(--color-ice);
+}
+
+.sidebar-dropdown .nav-link i {
+    background: var(--color-bg-menu);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 23px;
+    height: 23px;
+    border-radius: 2px;
+    margin-right: 15px;
+}
+
+@keyframes swing {
+    0% {
+        transform: rotate(0deg);
+    }
+    10% {
+        transform: rotate(10deg);
+    }
+    20% {
+        transform: rotate(0deg);
+    }
+    30% {
+        transform: rotate(-10deg);
+    }
+    40% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(-5deg);
+    }
+    60% {
+        transform: rotate(0deg);
+    }
+    70% {
+        transform: rotate(5deg);
+    }
+    80% {
+        transform: rotate(0deg);
+    }
+    90% {
+        transform: rotate(-5deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.sidebar-dropdown:hover .nav-link i::before {
+    animation-name: swing;
+    animation-duration: .6s;
+}
+
+.sidebar-dropdown:hover .nav-link i::before {
+    color: var(--color-blue-100);
+    text-shadow: 0px 0px 20px var(--color-blue-100);
+}
+
+.sidebar-dropdown:hover .nav-link i {
+    box-shadow: 0px 0px 5px 1px rgba(255, 255, 255, .4);
+    transition: all .3s ease-out;
+}
+
+.sidebar-dropdown.active .nav-link i {
+    color: rgb(79, 177, 207);
+    box-shadow: 0px 0px 5px 1px rgba(255, 255, 255, .4);
 }
 
 .sidebar-dropdown a::after {
+    width: 40px;
+    height: 40px;
     font-family: 'remixicon';
-    font-weight: bold;
-    font-size: 16px;
-    content: "\ea6e";
+    font-weight: 600;
+    font-size: 24px;
+    content: "\ea56";
     position: absolute;
-    top: 6px;
-    right: 17px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    /* margin-top: 12px; */
+    /* margin-right: 17px; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
     /* background: red; */
     transition: all .2s ease-in;
 }
 
 .active.sidebar-dropdown a::after {
-    transform: rotate(90deg);
+    transform: rotate(180deg);
+    font-weight: 500;
 }
 
 .sidebar-submenu {
-    background: #3a3f48;
-    background: linear-gradient(to top, #3a3f48 95%, transparent 100%);
+    background: var(--color-bg-submenu);
+    background: linear-gradient(to top, #464c57 95%, transparent 100%);
     display: none;
+}
+
+
+/* navbar  */
+
+.search {
+    position: absolute;
+    font-size: 24px;
+    top: 0;
+    right: 14px;
+}
+
+.notifications {
+    position: relative;
+}
+
+.submenu {
+    background: var(--color-white);
+    border-radius: 4px;
+    border: 1px solid #bcbfc5;
+    width: 150px;
+    position: absolute;
+    z-index: 1;
+    margin-top: 5px;
+    right: 0;
+    /* display: none; */
+}
+
+.arrow {
+    width: 150px;
+    height: 10px;
+    background: red;
+    position: absolute;
+    z-index: 2;
+}
+
+.arrow::before {
+    /* content: "";
+    width: 15px;
+    height: 15px;
+    border-top-color: black;
+    background: var(--color-white);
+    background: white;
+    transform: rotate(45deg);
+    position: absolute;
+    top: 0;
+    margin-top: -8px;
+    right: 20px;
+    z-index: 0; */
+}
+
+.arrow::after {
+    /* border-top-color: black;
+    border-top: 1px solid #bcbfc5;
+    border-left: 1px solid #bcbfc5; */
 }
