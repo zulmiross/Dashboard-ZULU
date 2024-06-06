@@ -1,0 +1,38 @@
+.sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    padding: 30px 0;
+    box-shadow: inset -2px 0px 0px 0px rgba(0, 0, 0, .1);
+}
+
+.sidebar-dropdown {
+    position: relative;
+}
+
+.sidebar-dropdown a {
+    color: rgb(212, 215, 218);
+}
+
+.sidebar-dropdown a::after {
+    font-family: 'remixicon';
+    font-weight: bold;
+    font-size: 16px;
+    content: "\ea6e";
+    position: absolute;
+    top: 6px;
+    right: 17px;
+    /* background: red; */
+    transition: all .2s ease-in;
+}
+
+.active.sidebar-dropdown a::after {
+    transform: rotate(90deg);
+}
+
+.sidebar-submenu {
+    background: #3a3f48;
+    background: linear-gradient(to top, #3a3f48 95%, transparent 100%);
+    display: none;
+}
