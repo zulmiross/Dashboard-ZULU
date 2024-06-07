@@ -2,6 +2,7 @@
     --color-black: #0000;
     --color-white: #ffff;
     --color-ice: #dedede;
+    --color-gray: #585858;
     --color-blue: #007bff;
     --color-blue-100: #4fb1cf;
     --color-bg-menu: #4c4c66;
@@ -114,7 +115,7 @@ button {
     align-items: center;
     justify-content: center;
     /* background: red; */
-    transition: all .2s ease-in;
+    transition: all .1s ease-in;
 }
 
 .active.sidebar-dropdown a::after {
@@ -142,43 +143,76 @@ button {
     position: relative;
 }
 
+a.dropdown {
+    width: 50px;
+    height: 40px;
+}
+
 .submenu {
     background: var(--color-white);
     border-radius: 4px;
-    border: 1px solid #bcbfc5;
+    border: 1px solid var(--color-ice);
     width: 150px;
     position: absolute;
+    will-change: transform;
     z-index: 1;
     margin-top: 5px;
     right: 0;
-    /* display: none; */
+    display: block;
+    box-shadow: 2px 2px 5px -2px rgba(0, 0, 0, .3);
+    display: none;
+}
+
+.notifications a i {
+    color: var(--color-gray);
+    font-size: 1.2rem;
+    display: inline-flex;
+}
+
+.notifications a:hover i::before {
+    /* color: red; */
+    animation-name: swing;
+    animation-duration: .6s;
 }
 
 .arrow {
-    width: 150px;
-    height: 10px;
-    background: red;
+    width: 1rem;
+    height: .8rem;
     position: absolute;
-    z-index: 2;
+    top: calc(-.5rem - 1px);
+    display: block;
+    right: 0;
+    margin-right: 17px;
+}
+
+.arrow::before,
+.arrow::after {
+    position: absolute;
+    content: "";
+    display: block;
+    border-color: transparent;
+    border-style: solid;
 }
 
 .arrow::before {
-    /* content: "";
-    width: 15px;
-    height: 15px;
-    border-top-color: black;
-    background: var(--color-white);
-    background: white;
-    transform: rotate(45deg);
-    position: absolute;
     top: 0;
-    margin-top: -8px;
-    right: 20px;
-    z-index: 0; */
+    border-width: 0 .5rem .5rem .5rem;
+    border-bottom-color: rgba(0, 0, 0, .1);
 }
 
 .arrow::after {
-    /* border-top-color: black;
-    border-top: 1px solid #bcbfc5;
-    border-left: 1px solid #bcbfc5; */
+    top: 2px;
+    border-width: 0 .5rem .5rem .5rem;
+    border-bottom-color: var(--color-white);
+}
+
+.user {
+    position: relative;
+}
+
+.user img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    object-fit: cover;
 }
