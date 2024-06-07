@@ -18,7 +18,7 @@
             <a class="search list-unstyled" href="#"><i class="ri-search-2-line"></i></a>
         </div>
         <ul class="nav d-flex align-items-center">
-            <li class="nav-item dropdown notifications">
+            <!-- <li class="nav-item dropdown notifications">
                 <a href="#" class="nav-link dropdown-toggle d-flex align-items-center justify-content-center" id="dropdownMenuNotifications" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="ri-notification-2-line"></i></a>
                 <ul class="dropdown-menu submenu" aria-labelledby="dropdownMenuNotifications">
                     <div class="arrow"></div>
@@ -29,17 +29,43 @@
                                 <butotn type="button" class="btn btn-sm btn-light">Marcar como lidas</boton>
                             </div>
                         </div>
-                        <div class="card-body">
+                        <div class="card-body p-0">
                             <div class="px-2 px-sm-3 py-3 card-notification position-relative border-bottom">
-                                <div class="d-flex align-items-center justify-content-between position-relative">
-                                    <div class="d-flex">
+                                <div class="position-relative">
+                                    <div class="d-flex align-items-center justify-content-between">
                                         <div class="avatar">
-                                            <img class="img-fluid w-50" src="assets/img/avatar.png" alt="">
+                                            <img class="img-fluid" src="assets/img/avatar.png" alt="">
                                         </div>
-                                        <div class="flex-1 me-sm-3">
-                                            <h4>Nome usuário</h4>
-                                            <p>mensagem abreviada</p>
-                                            <p>data</p>
+                                        <div class="d-flex justify-content-between flex-column mr-5">
+                                            <h4 class="title m-0">Will Smith</h4>
+                                            <p class="message m-0 mb-1"><i class="ri-message-2-line"></i> Olá. Tudo bem? Como vai?</p>
+                                            <p class="datetime m-0"><small><b><i class="ri-time-fill"></i> 10h00min</b>&nbsp;&nbsp;&nbsp; 07/04/2024</small>
+                                            </p>
+                                        </div>
+                                        <div class="d-flex align-items-center">
+                                            <button class="btn btn-sm">
+                                                <svg class="svg-inline--fa fa-ellipsis fs-10 text-body" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="ellipsis" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M8 256a56 56 0 1 1 112 0A56 56 0 1 1 8 256zm160 0a56 56 0 1 1 112 0 56 56 0 1 1 -112 0zm216-56a56 56 0 1 1 0 112 56 56 0 1 1 0-112z"></path></svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="px-2 px-sm-3 py-3 card-notification position-relative border-bottom unread">
+                                <div class="position-relative">
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <div class="avatar">
+                                            <img class="img-fluid" src="assets/img/avatar.png" alt="">
+                                        </div>
+                                        <div class="d-flex justify-content-between flex-column mr-5">
+                                            <h4 class="title m-0">Joseph Mateus</h4>
+                                            <p class="message m-0 mb-1"><i class="ri-message-2-line"></i> Tem dinherio pra me emprestar?</p>
+                                            <p class="datetime m-0"><small><b><i class="ri-time-fill"></i> 00h00min</b>&nbsp;&nbsp;&nbsp; 27/04/2024</small>
+                                            </p>
+                                        </div>
+                                        <div class="d-flex align-items-center">
+                                            <button class="btn btn-sm">
+                                                <svg class="svg-inline--fa fa-ellipsis fs-10 text-body" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="ellipsis" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M8 256a56 56 0 1 1 112 0A56 56 0 1 1 8 256zm160 0a56 56 0 1 1 112 0 56 56 0 1 1 -112 0zm216-56a56 56 0 1 1 0 112 56 56 0 1 1 0-112z"></path></svg>
+                                            </button>
                                         </div>
                                     </div>
                                 </div>
@@ -47,15 +73,28 @@
                         </div>
                     </div>
                 </ul>
-            </li>
-            <!-- <li class="nav-item dropdown user">
+            </li> -->
+            <li class="nav-item dropdown user">
                 <a href="#" class="nav-link dropdown-toggle d-flex align-items-center justify-content-center" id="dropdownMenuUser" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="assets/img/perfil.JPG " alt=""></a>
                 <ul class="dropdown-menu submenu" aria-labelledby="dropdownMenuUser">
                     <div class="arrow "></div>
-                    <li class="nav-item "><a class="nav-link " href="# ">Link 1</a></li>
-                    <li class="nav-item "><a class="nav-link " href="# ">Link 2</a></li>
+                    <div class="card position-relative border-0">
+                        <div class="card-header p-2">
+                            <div class="d-flex justify-content-center align-items-center flex-column">
+                                <img class="image-perfil img-fluid" src="assets/img/perfil.JPG" alt="">
+                                <span class="name-perfil"><b>Will Smith</b></span>
+                            </div>
+                        </div>
+                        <div class="card-body p-0">
+                            <div class="px-2 px-sm-3 py-3 card-notification position-relative border-bottom">
+                                <div class="position-relative">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </ul>
-            </li> -->
+            </li>
         </ul>
     </nav>
 

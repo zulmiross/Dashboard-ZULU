@@ -8,6 +8,8 @@
     --color-blue-100: #4fb1cf;
     --color-bg-menu: #4c4c66;
     --color-bg-submenu: #3a3f48;
+    --color-green: #25b003;
+    --color-gray-100: #eff2f6;
 }
 
 a,
@@ -237,4 +239,60 @@ a.dropdown-toggle {
 
 .card-header .btn {
     font-size: .6rem;
+}
+
+.card-notification:hover {
+    background: rgba(0, 0, 0, .1) !important;
+}
+
+.card-notification.unread {
+    background: var(--color-gray-100);
+}
+
+.card-notification .avatar {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    /* background: red; */
+    position: relative;
+}
+
+.card-notification .avatar img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.card-notification .avatar::after {
+    content: "";
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    border: .1rem solid #fff;
+    background: var(--color-green);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin-right: 10%;
+    margin-bottom: 5%;
+}
+
+.card-notification .title {
+    font-size: 0.8rem;
+}
+
+.card-notification .message {
+    font-size: 0.7rem;
+}
+
+.card-notification .datetime {
+    font-size: 0.8rem;
+}
+
+.btn svg {
+    width: 10px;
 }
