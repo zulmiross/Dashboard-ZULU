@@ -11,16 +11,14 @@ jQuery(function($) {
         }
     })
 
-    $(".dropdown").on("click", function() {
-        $(this).toggleClass("active")
-        $(this).hasClass("active") ? $(this).next(".submenu").slideDown(50) : $(this).next(".submenu").slideUp(50)
-    })
+    // $(".dropdown").on("click", function() {
+    //     $(this).toggleClass("active")
+    //     $(this).hasClass("active") ? $(this).next(".submenu").slideDown(50) : $(this).next(".submenu").slideUp(50)
+
+    // })
 
     document.documentElement.onclick = function(event) {
 
-        if (event.target == document.querySelector(".nav-link")) {
-            console.log(event.target)
-        }
     }
 
 })
