@@ -18,7 +18,7 @@
             <a class="search list-unstyled" href="#"><i class="ri-search-2-line"></i></a>
         </div>
         <ul class="nav d-flex align-items-center">
-            <!-- <li class="nav-item dropdown notifications">
+            <li class="nav-item dropdown notifications">
                 <a href="#" class="nav-link dropdown-toggle d-flex align-items-center justify-content-center" id="dropdownMenuNotifications" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="ri-notification-2-line"></i></a>
                 <ul class="dropdown-menu submenu" aria-labelledby="dropdownMenuNotifications">
                     <div class="arrow"></div>
@@ -73,23 +73,34 @@
                         </div>
                     </div>
                 </ul>
-            </li> -->
+            </li>
             <li class="nav-item dropdown user">
-                <a href="#" class="nav-link dropdown-toggle d-flex align-items-center justify-content-center" id="dropdownMenuUser" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="assets/img/perfil.JPG " alt=""></a>
+                <a href="#" class="nav-link dropdown-toggle d-flex align-items-center justify-content-center" id="dropdownMenuUser" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="assets/img/perfil.JPG" alt=""></a>
                 <ul class="dropdown-menu submenu" aria-labelledby="dropdownMenuUser">
-                    <div class="arrow "></div>
+                    <div class="arrow"></div>
                     <div class="card position-relative border-0">
                         <div class="card-header p-2">
                             <div class="d-flex justify-content-center align-items-center flex-column">
-                                <img class="image-perfil img-fluid" src="assets/img/perfil.JPG" alt="">
-                                <span class="name-perfil"><b>Will Smith</b></span>
+                                <img style="width:60px;height:60px;" class="img-fluid" src="assets/img/perfil.JPG" alt="">
+                                <span style="font-size: .8rem;" class="pt-2"><b>Will Smith</b></span>
                             </div>
                         </div>
                         <div class="card-body p-0">
-                            <div class="px-2 px-sm-3 py-3 card-notification position-relative border-bottom">
-                                <div class="position-relative">
-
-                                </div>
+                            <div class="border-bottom">
+                                <ul class="nav flex-column">
+                                    <li class="nav-item">
+                                        <a class="nav-link text-dark" href="#"><i class="ri-user-3-line mr-3"></i> Perfil</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link text-dark" href="#"><i class="ri-message-2-line mr-3"></i> Mensagenss</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link text-dark" href="#"><i class="ri-bar-chart-2-line mr-3"></i> Dashboard</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="position-relative d-flex justify-content-center p-3">
+                                <button class="btn btn-light w-100"><i class="ri-expand-right-line pr-2"></i> Sair</button>
                             </div>
                         </div>
                     </div>
@@ -101,31 +112,41 @@
 
 
 
-    <div class="container-fluid ">
-        <div class="row ">
-            <nav class="col-md-3 col-lg-2 bg-dark text-light sidebar d-none d-md-block ">
-                <nav class="navbar-brand ">
+    <div class="container-fluid">
+        <div class="row">
+            <nav class="col-md-3 col-lg-2 bg-dark text-light sidebar d-none d-md-block">
+                <nav class="navbar-brand">
                     LOGO
                 </nav>
-                <div class="pt-3 ">
-                    <ul class="nav flex-column ">
-                        <li class="nav-item sidebar-dropdown ">
-                            <a href="# " class="nav-link active "><i class="ri-bar-chart-fill "></i>  Dashboard</a>
-                            <div class="sidebar-submenu ">
-                                <ul class="list-unstyled pl-3 ">
-                                    <li class="nav-item active "><a class="nav-link " href="# ">Item1</a></li>
-                                    <li class="nav-item active "><a class="nav-link " href="# ">Item2</a></li>
-                                    <li class="nav-item active "><a class="nav-link " href="# ">Item3</a></li>
+                <div class="pt-3">
+                    <ul class="nav flex-column">
+                        <li class="nav-item sidebar-dropdown">
+                            <a href="#" class="nav-link"><i class="ri-bar-chart-fill"></i>  Dashboard</a>
+                            <div class="sidebar-submenu">
+                                <ul class="list-unstyled pl-3">
+                                    <li class="nav-item"><a class="nav-link" href="#">Item1</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#">Item2</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#">Item3</a></li>
                                 </ul>
                             </div>
                         </li>
-                        <li class="nav-item ">
-                            <a href="# " class="nav-link "><i class="ri-stack-fill "></i>  Components</a>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link"><i class="ri-stack-fill"></i>  Components</a>
+                        </li>
+                        <li class="nav-item sidebar-dropdown">
+                            <a href="#" class="nav-link"><i class="ri-archive-2-line"></i>  Products</a>
+                            <div class="sidebar-submenu">
+                                <ul class="list-unstyled pl-3">
+                                    <li class="nav-item"><a class="nav-link" href="#">Item1</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#">Item2</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#">Item3</a></li>
+                                </ul>
+                            </div>
                         </li>
                     </ul>
                 </div>
             </nav>
-            <main class="col-md-9 col-lg-10 ml-sm-auto bg-primary ">
+            <main class="col-md-9 col-lg-10 ml-sm-auto bg-primary">
                 <h1>Titulo</h1>
             </main>
         </div>
@@ -134,12 +155,12 @@
 
     <!-- JavaScript (Opcional) -->
     <!-- jQuery primeiro, depois Popper.js, Chart.js depois Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js " integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo " crossorigin="anonymous "></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js "></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js " integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49 " crossorigin="anonymous "></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js "></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js " integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy " crossorigin="anonymous "></script>
-    <script src="assets/js/script.js "></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="assets/js/script.js"></script>
 </body>
 
 </html>
